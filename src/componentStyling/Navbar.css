@@ -1,0 +1,154 @@
+body{
+    font-family: 'inter';
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    max-height: 15vh;
+    padding : 20px;
+    align-items: center;
+    
+}
+.navbarLogo{
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-right: 2rem;
+}
+.logoName{
+    margin-right: 10rem;
+    font-size: 2rem;
+    color: rgb(21, 21, 24);
+}
+.activeNavName{
+    font-size: 2.5rem;
+}
+.searchContainer{
+    display: flex;
+    flex: 1;
+    /* padding: 1rem 1rem; */
+    border-radius: 10px;
+    margin: 0 2rem;
+    background-color: rgba(226, 229, 229, 0.27);
+}
+.searchContainer:hover{
+    background-color: rgba(226, 229, 229, 0.75);
+}
+.searchIcon{
+   padding: 1rem;
+}
+input::placeholder{
+    color: rgb(130, 128, 127);
+}
+.searchInput{ 
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: large;
+    width: 100%;
+}
+.languageContainer{
+    position: relative;
+}
+.countyIcon{
+    cursor: pointer;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.countyIcon:hover{
+    background-color: rgba(226, 229, 229, 0.75);
+    transition: ease-in-out 0.2s;
+}
+
+.countyIcon.clicked {
+    transition: ease-in-out 0.5s;
+    background: linear-gradient(135deg, rgba(226, 229, 229, 0.27), rgba(226, 229, 229, 0.75));
+}
+.flag{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.dropdown{
+    position: absolute;
+    top: 3.5rem;
+    right: 0rem;
+    background-color: white;
+    box-shadow: 1rem 4rem 4rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    width: 10rem;
+    z-index: 10;
+}
+
+.dropdown.clicked{
+    transition: ease-in-out 5s;
+}
+.dropdownItem{
+    display: flex;
+    align-items: center;
+    padding: 8px 10px; 
+    cursor: pointer;
+}
+.dropdownItem:hover{
+    background-color: #7739e1;
+}
+.dropdownFlag{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.bellIconContainer{
+    width: 3rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    margin: 0 20px;
+    border-radius: 5px;
+    background: linear-gradient(to left, rgba(236, 205, 165, 0.488), rgba(226, 229, 229, 0.75)) right;
+    background-size: 200%;
+}
+.bellIconContainer:hover{
+    background-position: left;
+}
+.bellIconContainer::after{
+    content: "";
+    position: absolute;
+    top: 55px;
+    right: 125px; 
+    width: 8px;
+    height: 8px;
+    background-color: rgba(240, 65, 65, 0.712);
+    border-radius: 50%; 
+}
+.profileContainer{
+    width: 5rem;
+    height: 5rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 5px;
+
+}
+.profileContainer:hover{
+    background-color: rgba(224, 230, 230, 0.532);
+
+}
+.profile{
+    width: 4rem;
+    height: 4rem;
+    resize: cover;
+    border-radius: 15px;
+}

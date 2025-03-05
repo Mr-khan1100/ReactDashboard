@@ -1,0 +1,179 @@
+
+.sideNavContainer::-webkit-scrollbar {
+    width: 0; 
+    background: transparent; 
+}
+
+.sideNavSection {
+    display: flex;
+    width: 250px;
+    height: calc(100vh - 120px); /* Full height minus navbar height */
+    background-color: white;
+    position: fixed;
+    top:120px;
+    color: rgb(164, 160, 160);
+    padding: 0px 50px;
+    overflow: hidden;
+    transition: 0.3s smooth ease-in;
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.sideNavContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 500px;
+    overflow-y: auto;
+}
+
+.UlList{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.signContainer {
+    display: flex;
+    justify-content: center;
+    /* margin-left: 2em; */
+    /* background-color: red; */
+    width: 100%;
+    padding: 10px 0; /* Add padding */
+    color: rgba(56, 62, 64, 0.822);
+}
+
+.signContainer .signList:hover {
+    background-color: #625ee1;
+    color: white;
+    border-radius: 15px;
+}
+.signUL {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0;
+    margin: 0;
+}
+
+.signList {
+    width: 75%;
+    padding: 20px 40px; /* Add padding to list items */
+}
+
+
+.signLink {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Text color */
+    display: block; /* Make the entire area clickable */
+}
+
+.signText {
+    font-size: 16px; /* Text size */
+    font-weight: 500; /* Medium font weight */
+}
+
+
+.ElementList{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 24px 0;
+}
+
+
+.ElementList:hover {
+    background-color: #897ce4e6;
+    color: white;
+    cursor: pointer;
+}
+
+.ElementList.active {
+    background-color: #625ee1;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.MultiListTextRoot.primary {
+    color: white;
+    font-weight: 600;
+}
+
+.ElementList.active:hover {
+    background-color: #2e2a96;
+}
+
+.ElementList.secondary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px 20px;
+    color: rgb(69, 64, 89);
+    border-radius: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.AuthNav{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.dropDownIcon{
+    margin-left: 24px;
+}
+.ElementList.secondary:hover {
+    color: rgba(234, 227, 227, 0.87);
+    background-color: #625ee1;
+    
+}
+
+
+.MultiListIconRoot {
+    margin-right: 10px;
+}
+
+
+.MultiListTextRoot{
+    font-size: 18px;
+    font-weight: 400;
+    color: inherit;
+}
+
+.MultiListTextRoot.secondary{
+    color: inherit;
+    font-weight: 400;
+}
+
+.MultiListTextRoot.secondary:hover{
+    color: inherit;
+}
+
+.ElementList a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+}
+
+@media (max-width: 992px) {
+
+    .sideNavSection {
+        display: none;
+        width: 250px;
+        height: calc(100vh - 120px);
+        color: rgb(164, 160, 160);
+        position: fixed;
+        left: -250px; /* Initially hidden */
+        transition: left 0.3s ease-in-out;
+    }
+
+    .sideNavSection.open{
+        display: flex;
+        left: 0;
+    }
+
+}

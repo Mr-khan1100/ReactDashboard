@@ -1,0 +1,40 @@
+.sales-card {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 12px;
+    flex:  1 1 200px; /* Responsive - 2 per row */
+    min-width: 150px;
+    max-width: 100%;
+    text-align: start;
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+}
+
+.sales-card-icon {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+}
+
+
+.sales-card-value {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.sales-card-label {
+    margin: 0;
+    color: #555;
+    font-weight: bold;
+}
+
+.sales-card-change {
+    color: rgb(110, 110, 231);
+    font-size: 14px;
+    margin-top: 5px;
+}

@@ -4,8 +4,8 @@ import Profile from '../assets/profileImage.jpeg';
 import '../componentStyling/Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass, faBell , faBars} from '@fortawesome/free-solid-svg-icons'
-function Navbar(props) {
-    const activeNav = props?.route?.params?.activeNav || 'Dashboard';
+function Navbar({toggleSideNav}) {
+    const activeNav = 'Dashboard';
     // const searchIcon = <FontAwesomeIcon icon={faMagnifyingGlass} size='2xl' style={{color: "#4917CB"}} />
     const bellICon = <FontAwesomeIcon icon={faBell} size='xl' style={{color: "#FFD43B",}} />
     const hamburgerIcon = <FontAwesomeIcon icon={faBars} size="xl" />;
@@ -58,7 +58,6 @@ function Navbar(props) {
     const [selectedLanguage, setSelectedLanguage] = useState(country[0]); // Default: English
     const [showDropdown, setShowDropdown] = useState(false);
     const [isClicked, setIsClicked] = useState(false);
-    const [showSideNav, setShowSideNav] = useState(false);
     const handleLanguageSelect = (language) => {
         setSelectedLanguage(language);
         setShowDropdown(false); // Hide dropdown after selection
@@ -74,11 +73,8 @@ function Navbar(props) {
         setsearch(e.target.value);
     } 
 
-    const toggleSideNav = () => {
-      setShowSideNav(!showSideNav); // Toggle side nav drawer
-  };
-
   return (
+    <>
     <div className='navbar'>
 
         <img src={AppLogo} alt='AppLogo' className='navbarLogo' />
@@ -124,6 +120,7 @@ function Navbar(props) {
         <img src={Profile} alt='profile-image' className='profile' />
       </div>
     </div>
+    </>
   )
 }
 

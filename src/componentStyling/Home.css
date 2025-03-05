@@ -1,0 +1,41 @@
+/* Overall layout */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrolling on entire page */
+}
+
+/* Content container holding SideNav and Main */
+.content-container {
+    display: flex;
+    flex: 1; /* Fills remaining space */
+    overflow: hidden;
+}
+
+/* Main should be scrollable and allow wrapping */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap; /* Ensures items wrap instead of overflowing */
+    align-content: flex-start; /* Align items at the top */
+    padding-top: 100px;
+    padding-left: 350px;
+    margin-bottom: 20px;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+/* Flex items inside main-content */
+.main-content > * {
+    flex: 1 1 auto; /* Allow items to grow and wrap */
+    min-width: 250px; /* Set a minimum width before wrapping */
+    max-width: 100%; /* Prevent items from overflowing */
+}
+
+/* Adjust when SideNavBar is hidden */
+@media (max-width: 992px) {
+    .main-content {
+        padding-left: 0px;
+    }
+}
